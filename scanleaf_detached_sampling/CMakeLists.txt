@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.28)
 # 项目名称
 project(scan2)
 
+# if you couldn't find opencv, you need set opencv includepath
 # 查找OpenCV包
 find_package(OpenCV REQUIRED)
 
