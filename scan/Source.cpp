@@ -12,17 +12,17 @@ int main()
 	else {
 		cout << "ok" << endl;
 	}
-	cout << A.leaf_length << endl;//³¤
-	cout << A.leaf_width << endl;//¿í
-	cout << A.length_widith_ratio << endl;//³¤¿í±È
-	cout << A.leaf_perimeter << endl;//ÖÜ³¤
-	cout << A.leaf_area << endl;//¶ş½×¾ØÇóÃæ»ı
-	cout << A.rectangularity << endl;//¾ØĞÎ¶È£ºÒ¶Æ¬Ãæ»ıÓëMERÃæ»ı±ÈÖµ£»
-	cout << A.densification << endl;//ÖÂÃÜ¶È£ºÖÜ³¤Æ½·½ÓëÃæ»ı±ÈÖµ£»
-	cout << A.circularity << endl;//Ô²ĞÎĞÔ£ºÖÊĞÄµ½±ß½çµãµÄÆ½¾ù¾àÀë/¾àÀë¾ù·½²î
-	cout << A.sphericity << endl;//Çò×´ĞÔ£º2DÎªÄÚ½ÓÔ²°ë¾¶/Íâ½ÓÔ²°ë¾¶£»
-	cout << A.boundary_energy << endl;//±ß½çÄÜÁ¿
-	cout << A.leaf_color << endl;//ÑÕÉ«
+	cout << A.leaf_length << endl;//ï¿½ï¿½
+	cout << A.leaf_width << endl;//ï¿½ï¿½
+	cout << A.length_widith_ratio << endl;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	cout << A.leaf_perimeter << endl;//ï¿½Ü³ï¿½
+	cout << A.leaf_area << endl;//ï¿½ï¿½ï¿½×¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	cout << A.rectangularity << endl;//ï¿½ï¿½ï¿½Î¶È£ï¿½Ò¶Æ¬ï¿½ï¿½ï¿½ï¿½ï¿½MERï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½
+	cout << A.densification << endl;//ï¿½ï¿½ï¿½Ü¶È£ï¿½ï¿½Ü³ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½
+	cout << A.circularity << endl;//Ô²ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½Äµï¿½ï¿½ß½ï¿½ï¿½ï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	cout << A.sphericity << endl;//ï¿½ï¿½×´ï¿½Ô£ï¿½2DÎªï¿½Ú½ï¿½Ô²ï¿½ë¾¶/ï¿½ï¿½ï¿½Ô²ï¿½ë¾¶ï¿½ï¿½
+	cout << A.boundary_energy << endl;//ï¿½ß½ï¿½ï¿½ï¿½ï¿½ï¿½
+	cout << A.leaf_color << endl;//ï¿½ï¿½É«
 	while (true) {}
 	return 0;
 }
