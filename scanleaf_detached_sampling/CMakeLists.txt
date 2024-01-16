@@ -4,7 +4,6 @@ cmake_minimum_required(VERSION 3.28)
 # 项目名称
 project(scan2)
 
-# set(OpenCV_DIR "D:/opencv/build")
 # 查找OpenCV包
 find_package(OpenCV REQUIRED)
 
