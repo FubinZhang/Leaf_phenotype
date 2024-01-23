@@ -26,7 +26,7 @@ class Mask:
 
         cfg.MODEL.ROI_HEADS.NUM_CLASSES = 2  # 两个类别，包括背景
         cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.9
-        cfg.MODEL.WEIGHTS = "./pths/model_final.pth"   # 读取已经训练好的网络模型参数
+        cfg.MODEL.WEIGHTS = "./model_final.pth"   # 读取已经训练好的网络模型参数
 
         # print('网络参数读取成功')
 
