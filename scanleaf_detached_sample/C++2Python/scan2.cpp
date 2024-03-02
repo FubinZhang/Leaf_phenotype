@@ -280,11 +280,10 @@ void scan2::Count_color(Mat img, Point2d left, Point2d right, string& color)
 		color = "Light Yellow";
 }
 
-leaf scan2::Process_src(string path)
+leaf scan2::Process_src(Mat src)
 {
 
 	leaf set;
-	Mat src = imread(path, IMREAD_COLOR);
 	if (src.empty())
 	{
 		set.ERROS+="δ���ͼƬԴ";

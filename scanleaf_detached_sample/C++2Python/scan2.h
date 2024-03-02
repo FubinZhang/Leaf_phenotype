@@ -39,7 +39,7 @@ class scan2
 public:
 	scan2();
 	~scan2();
-	leaf Process_src(string path);
+	leaf Process_src(Mat src);
 	static bool cmp(vector<Point> const& A, vector<Point> const& B);
 	void findLongestLine(vector<vector<Point>>& lines);
 private:
