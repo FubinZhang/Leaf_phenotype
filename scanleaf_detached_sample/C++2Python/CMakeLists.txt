@@ -1,5 +1,5 @@
 # 设置最低的CMake版本
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.22.1)
 
 # 项目名称
 project(pycv)
