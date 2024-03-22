@@ -5,7 +5,7 @@ import cv2
 import shutil
 import subprocess
 from datetime import datetime
-
+import pybeanbox
 
 if __name__ == '__main__':
 
@@ -32,6 +32,14 @@ if __name__ == '__main__':
 
     pre_mask = mr.Mask()
     pre_mask.predict_result(imgPath, maskPath, showPath, show_result = True)
-    subprocess.run(["/home/njau/auto_leaf/pcl_deal/beanbox", plant.intrinsics2, dthPath + "depth.png", maskPath, date_outpath])
+    
+    # use run_exe
+    # subprocess.run(["/home/njau/auto_leaf/pcl_deal/beanbox", plant.intrinsics2, dthPath + "depth.png", maskPath, date_outpath])
+    # use pybind11
+    # 创建BeanBox2对象
+    bean_box = pybeanbox.BeanBox2()
+    # 调用run函数
+    bean_box.run(plant.intrinsics2, dthPath + "depth.png", maskPath, date_outpath)
 
+    # close the camera 
     d435.close_d435()
