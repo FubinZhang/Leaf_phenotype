@@ -9,7 +9,8 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
-#include <pybind11/stl.h>
+// 关于pybind11的头文件
+#include <pybind11/stl.h>  
 #include <pybind11/pybind11.h>
 #include <pybind11/numpy.h>
 
@@ -22,17 +23,17 @@ struct leaf
 	Mat src_gray;
 	Mat src_otsu;
 	Mat src_hsv;
-	double leaf_length;//��
-	double leaf_width;//��
-	double length_widith_ratio;//������
-	double leaf_perimeter;//�ܳ�
-	double leaf_area;//���׾������
-	double rectangularity;//���ζȣ�ҶƬ�����MER�����ֵ��
-	double densification;//���ܶȣ��ܳ�ƽ���������ֵ��
-	double circularity;//Բ���ԣ����ĵ��߽���ƽ������/���������
-	double sphericity;//��״�ԣ�2DΪ�ڽ�Բ�뾶/���Բ�뾶��
-	double boundary_energy;//�߽�����
-	string leaf_color;//��ɫ
+	double leaf_length;
+	double leaf_width;
+	double length_widith_ratio;
+	double leaf_perimeter;
+	double leaf_area;
+	double rectangularity;
+	double densification;
+	double circularity;
+	double sphericity;
+	double boundary_energy;
+	string leaf_color;
 };
 class scan2
 {

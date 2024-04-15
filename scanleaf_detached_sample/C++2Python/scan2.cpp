@@ -143,9 +143,9 @@ void scan2::drawContour(Mat& image, vector<Point>& Line)
 
 double scan2::arc_circularity(vector<Point>& line, Point center)
 {
-	double avedistance = 0;//���ĵ��߽���ƽ������
-	double vardistance = 0;//���������
-	double circularity;//Բ���ԣ����ĵ��߽���ƽ������/���������
+	double avedistance = 0;
+	double vardistance = 0;
+	double circularity;
 	for (int i = 0; i < line.size(); i++)
 	{
 		avedistance += sqrt(pow(line[i].y - center.y, 2) + pow(line[i].x - center.x, 2));
@@ -162,7 +162,7 @@ double scan2::arc_circularity(vector<Point>& line, Point center)
 
 double scan2::arc_sphericity(vector<Point>& line, Point center, Rect rec, int reduce)
 {
-	//��״�ԣ�2DΪ�ڽ�Բ�뾶/���Բ�뾶��
+	
 	double dist, maxdist = 0;
 	Point2f maxcir_center;
 	Point mincir_center;
@@ -319,25 +319,25 @@ leaf scan2::Process_src(Mat src)
 		centroid.y = cvRound(moment.m01 / moment.m00);
 	}
 
-	//��Բ��Ϸ�����ҶƬ�������᷽��
-	RotatedRect box = fitEllipse(lines[0]); //��Բ��ϵ�ǰ��������
-	vector<Point> line_transform; //�����任��ĵ�
+	
+	RotatedRect box = fitEllipse(lines[0]); 
+	vector<Point> line_transform; 
 	line_transform.resize(lines[0].size());
 	double rangle = 90 - box.angle;
-	changecontours(lines[0], line_transform, box.center, rangle);//����Բ������ת����
-	Rect rec = boundingRect(line_transform);//�������
+	changecontours(lines[0], line_transform, box.center, rangle);
+	Rect rec = boundingRect(line_transform);
 
-	set.leaf_length = rec.width * kc;//��
-	set.leaf_width = rec.height * kc;//��
-	set.length_widith_ratio = set.leaf_length / set.leaf_width;//������
-	set.leaf_perimeter = arcLength(lines[0], true) * kc;//�ܳ�
-	set.leaf_area = moment.m00 * kc * kc;//���׾������
-	set.rectangularity = moment.m00 / (rec.width * rec.height);//���ζȣ�ҶƬ�����MER�����ֵ��
-	set.densification = pow(set.leaf_perimeter, 2) / (set.leaf_area);//���ܶȣ��ܳ�ƽ���������ֵ��
-	set.circularity = arc_circularity(lines[0], centroid);//Բ���ԣ����ĵ��߽���ƽ������/���������
-	set.sphericity = arc_sphericity(line_transform, box.center, rec, 10);//��״�ԣ�2DΪ�ڽ�Բ�뾶/���Բ�뾶��
-	set.boundary_energy = arc_boundary_energy(line_transform, src);//�߽�����
-	Count_color(set.src_hsv, rec.tl(), rec.br(), set.leaf_color);//��ɫ
+	set.leaf_length = rec.width * kc;
+	set.leaf_width = rec.height * kc;
+	set.length_widith_ratio = set.leaf_length / set.leaf_width;
+	set.leaf_perimeter = arcLength(lines[0], true) * kc;
+	set.leaf_area = moment.m00 * kc * kc;
+	set.rectangularity = moment.m00 / (rec.width * rec.height);
+	set.densification = pow(set.leaf_perimeter, 2) / (set.leaf_area);
+	set.circularity = arc_circularity(lines[0], centroid);
+	set.sphericity = arc_sphericity(line_transform, box.center, rec, 10);
+	set.boundary_energy = arc_boundary_energy(line_transform, src);
+	Count_color(set.src_hsv, rec.tl(), rec.br(), set.leaf_color);
 	return set;
 }
 
