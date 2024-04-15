@@ -35,6 +35,7 @@ if __name__ == '__main__':
     
     # use run_exe
     # subprocess.run(["/home/njau/auto_leaf/pcl_deal/beanbox", plant.intrinsics2, dthPath + "depth.png", maskPath, date_outpath])
+    
     # use pybind11
     # 创建BeanBox2对象
     bean_box = pybeanbox.BeanBox2()
