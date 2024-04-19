@@ -7,6 +7,7 @@ project(pycv)
 # if you couldn't find opencv, you need set opencv includepath
 # 查找OpenCV包
 find_package(OpenCV REQUIRED)
+# 查找pybind11包
 find_package(pybind11 REQUIRED)
 
 # 添加头文件路径

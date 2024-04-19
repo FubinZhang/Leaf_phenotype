@@ -23,6 +23,5 @@ int main()
 	cout << A.sphericity << endl;//球度
 	cout << A.boundary_energy << endl;//边界能量
 	cout << A.leaf_color << endl;//颜色
-	while (true) {}
 	return 0;
 }
